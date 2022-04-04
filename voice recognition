@@ -1,0 +1,14 @@
+[javascript]
+var recognition = new webkitSpeechRecognition();
+recognition.continuous = false;
+recognition.interimResults = true;
+recognition.lang = ‘en-US’;
+recognition.start();
+recognition.onstart = function(event){
+console.log(“Voice recognition started”, event);
+}
+// Process parsed result
+recognition.onresult = function(event){
+console.log(“Voice recognised”, event);
+}
+[/javascript]
